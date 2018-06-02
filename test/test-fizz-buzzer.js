@@ -8,16 +8,12 @@ const adder = require('../fizzBuzzer');
 describe('fizzBuzzer', function() {
 
   // test the normal case
-  it('should add two numbers', function() {
-    // range of normal inputs, including
-    // notable cases like negative answers
+  it('should return fizz, buzz, or fizz-buzz', function() {
     const normalCases = [
       {a: 15, expected: 'fizz-buzz'},
       {a: 20, expected: 'buzz'},
       {a: 12, expected: 'fizz'}
     ];
-    // for each set of inputs (a, b), `adder` should
-    // produce the expected value
     normalCases.forEach(function(input) {
       const answer = fizzBuzzer(input.a);
       expect(answer).to.equal(input.expected);
